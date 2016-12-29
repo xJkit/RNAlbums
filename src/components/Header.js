@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 
 class Header extends Component {
   render() {
     return (
-      <Text style={styles.textStyles}>This is Header</Text>
+      <View style={styles.viewStyles}>
+        <Text style={styles.textStyles}>Albums</Text>
+      </View>
     );
   }
 }
 
 const styles = {
   textStyles: {
-    fontSize: 72,
+    fontSize: 36,
     color: 'red',
-    paddingTop: 25,
-    marginLeft: 25,
+    margin: 20,
   },
+  viewStyles: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'gray',
+  }
 };
 
 export default Header;
