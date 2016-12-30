@@ -24,6 +24,5 @@ class App extends Component {
   }
 }
 
-// const APIAlbums = 'http://rallycoding.herokuapp.com/api/music_albums';
 
 export default App;

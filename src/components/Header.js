@@ -1,22 +1,16 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import { Text, View } from 'react-native';
 
-class Header extends Component {
+const Header = props => (
 
-  static propTypes = {
-    albumTitle: PropTypes.string.isRequired,
-  };
-
-
-  render() {
-    const { albumTitle } = this.props;
-    return (
       <View style={styles.viewStyle}>
-        <Text style={styles.textStyle}>{albumTitle}</Text>
+        <Text style={styles.textStyle}>{props.albumTitle}</Text>
       </View>
-    );
-  }
-}
+);
+
+Header.propType = {
+  albumTitle: PropTypes.string.isRequired,
+};
 
 const styles = {
   textStyle: {
