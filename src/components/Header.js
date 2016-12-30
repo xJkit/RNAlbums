@@ -1,26 +1,41 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Text, View } from 'react-native';
 
 class Header extends Component {
+
+  static propTypes = {
+    albumTitle: PropTypes.string.isRequired,
+  };
+
+
   render() {
+    const { albumTitle } = this.props;
     return (
-      <View style={styles.viewStyles}>
-        <Text style={styles.textStyles}>Albums</Text>
+      <View style={styles.viewStyle}>
+        <Text style={styles.textStyle}>{albumTitle}</Text>
       </View>
     );
   }
 }
 
 const styles = {
-  textStyles: {
+  textStyle: {
     fontSize: 36,
     color: 'red',
     margin: 20,
   },
-  viewStyles: {
+  viewStyle: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'gray',
+    backgroundColor: '#E8E8E8',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.8,
+    elevation: 2,
+    position: 'relative',
   }
 };
 
