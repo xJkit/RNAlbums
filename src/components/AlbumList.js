@@ -19,6 +19,7 @@ class AlbumList extends Component {
         this.setState({
           albums: json,
         });
+        console.warn(json);
       })
       .catch(err => {
         console.error('Fetch 失敗！');

@@ -1,6 +1,6 @@
 {
  "extends": "rallycoding",
- env: {
-   browser: true
+ "env": {
+   "browser": true
    }
 }
