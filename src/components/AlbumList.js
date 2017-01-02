@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-
+import { View } from 'react-native';
+import AlbumDetail from './AlbumDetail';
 // const APIAlbums = 'http://rallycoding.herokuapp.com/api/music_albums';
 
 class AlbumList extends Component {
@@ -19,7 +19,6 @@ class AlbumList extends Component {
         this.setState({
           albums: json,
         });
-        console.warn(json);
       })
       .catch(err => {
         console.error('Fetch 失敗！');
@@ -28,9 +27,15 @@ class AlbumList extends Component {
   }
 
   render() {
+    const { albums } = this.state;
     return (
       <View>
-        <Text>Album List!</Text>
+        {albums.map(album => (
+          <AlbumDetail
+            key={album.title}
+            {...album}
+          />
+        ))}
       </View>
     );
   }
