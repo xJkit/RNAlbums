@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 
 const Card = props => (
@@ -20,6 +20,10 @@ const styles = {
     marginRight: 5,
     marginTop: 10,
   }
+};
+
+Card.propTypes = {
+  children: PropTypes.any.isRequired,
 };
 
 export default Card;

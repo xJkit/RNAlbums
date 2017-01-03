@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <View>
-        <Header albumTitle="Beatles" />
+        <Header albumTitle="Albums" />
         <AlbumList />
       </View>
     );

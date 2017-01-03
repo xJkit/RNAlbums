@@ -15,7 +15,7 @@ Header.propType = {
 const styles = {
   textStyle: {
     fontSize: 36,
-    color: 'red',
+    color: 'black',
     margin: 20,
   },
   viewStyle: {
