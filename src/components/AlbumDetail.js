@@ -1,11 +1,12 @@
 import React, { PropTypes } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text } from 'react-native';
+import Card from './Card';
 
 const AlbumDetail = props => (
-  <View>
+  <Card>
     <Text>Artist: {props.artist}</Text>
     <Text>Title: {props.title}</Text>
-  </View>
+  </Card>
 );
 
 AlbumDetail.propTypes = {
