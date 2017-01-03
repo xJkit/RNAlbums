@@ -1,10 +1,12 @@
 const app = require('express')();
 const ALBUMS = require('./albums.json');
 
+const PORT = 3001;
+
 app.get('/albums', (req, res) => {
   res.json(ALBUMS);
 });
 
-app.listen(3000, () => {
-  console.log('express listened on port 3000');
+app.listen(PORT, () => {
+  console.log(`express listened on port ${PORT}`);
 });

@@ -20,7 +20,7 @@ const styles = {
 };
 
 CardSection.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.object).isRequired,
+  children: PropTypes.any.isRequired,
 };
 
 export default CardSection;
